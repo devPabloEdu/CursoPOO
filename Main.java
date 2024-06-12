@@ -23,6 +23,9 @@ public class Main {
         cachorro1.peso = 5.5;
         cachorro1.tamanhoDoRabo = 5;
 
-        System.out.println(cachorro1.altura);
+        cachorro1.Latir();
+        System.out.println("O cachorro pegou uma " + cachorro1.pegar());//se nao tivesse dentro do system out iria retornar mas n escreveria na tela
+
+        System.out.println("o cachorro está " + cachorro1.interagir("carinho"));
     }
 }
