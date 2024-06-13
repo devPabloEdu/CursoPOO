@@ -2,6 +2,7 @@ package Animais;
 
 public class Cachorro {
 //atributos
+    static int numeroDeCachorros;
     private String nome;
     private String cor;
     private int altura;
@@ -22,9 +23,21 @@ public class Cachorro {
         this.altura = altura;
         this.tamanhoDoRabo = tamanhoDoRabo;
         this.estadoDeEspirito = estadoDeEspirito;
+
+        numeroDeCachorros ++;
     }
 
     //metodos
+
+
+    public static int getNumeroDeCachorros() {
+        return numeroDeCachorros;
+    }
+
+    public static void setNumeroDeCachorros(int numeroDeCachorros) {
+        Cachorro.numeroDeCachorros = numeroDeCachorros;
+    }
+
     public String getNome(){
         return this.nome;
     }
@@ -82,6 +95,13 @@ public class Cachorro {
         return "bolinha";
     }
 
+    @Override
+    public String toString() {
+        return "Cachorro{" +
+                "nome='" + nome + '\'' +
+                '}';
+    }
+
     public String interagir(String acao) {
 
         switch (acao){
@@ -107,5 +127,6 @@ public class Cachorro {
 //            this.estadoDeEspirito = "neutro, pois voce não interagiu com ele";
 //        }
 //        return  estadoDeEspirito;
+
     }
 }
