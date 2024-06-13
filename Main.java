@@ -1,6 +1,7 @@
 import Animais.Cachorro;
 import Animais.Gato;
 import Animais.Passaro;
+import Lojas.Petshop;
 
 public class Main {
 
@@ -23,5 +24,15 @@ public class Main {
         cachorro1.soar();
         passsaro1.soar();
         gato1.soar();
+
+        Petshop petshop = new Petshop();
+        petshop.darBanho(cachorro1);
+        System.out.println(cachorro1.getEstadoDeEspirito());
+
+        petshop.tosar(cachorro1);
+        System.out.println(cachorro1.getEstadoDeEspirito());
+
+        petshop.deixarNoHotel(cachorro1);
+        System.out.println(cachorro1.getEstadoDeEspirito());
     }
 }
